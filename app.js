@@ -3,9 +3,10 @@ function getCatsBreedAndPhoto() {
     .then((res) => res.json())
     .then((data) =>
       data.filter((cat) => {
-        if (cat.image) {
-          return cat.image.url;
-        }
+        // if (cat.image) {
+        //   return cat.image.url;
+        // }
+        return cat.image?.url;
       }),
     );
 }
